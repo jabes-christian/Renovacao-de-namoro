@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0e8e8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    overflow: hidden; /* Evita barras de rolagem */
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 300px;
+    position: relative; /* Necessário para posicionar o botão */
+}
+
+h1, h2 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 94%;
+}
+
+button {
+    background-color: #7161ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #572afa;
+}
+
+.hidden {
+    display: none;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#noButton {
+    position: relative;
+    transition: transform 0.0s linear; /* Ajuste a duração da transição */
+}
+
+
+#secaoContrato {
+    margin-top: 20px;
+}

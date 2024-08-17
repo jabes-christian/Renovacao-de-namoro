@@ -4,11 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RENOVAÇÃO DE NAMORO</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>GATINHA</h1>
-    <hr>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam blanditiis accusamus, suscipit odio vero quae vel voluptates odit pariatur dolorum labore eum aspernatur. Harum, tempora nisi! Ab aspernatur id voluptatem.</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat sit reiciendis dolorum aspernatur quo ipsa omnis et. Quibusdam ut vel at, laboriosam, molestiae praesentium doloribus porro dolorem deleniti quos voluptates!</p>
+    <div class="container">
+        <!-- Formulário de Login -->
+        <div id="secaoLogin">
+            <h1>Cadastro</h1>
+            <h2>Para o coração do seu amado</h2>
+            <form id="loginForm">
+                <label for="username">Nome:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="button" onclick="mostrarMensagemRenovação()">Acessar</button>
+            </form>
+        </div>
+
+        <!-- Mensagem de Renovação -->
+        <div id="secaoRenovação" class="hidden">
+            <h2>Você aceita fazer uma renovação do nosso namoro?</h2>
+            <div id="buttons">
+                <button id="yesButton" onclick="mostrarContrato()">Sim</button>
+                <button id="noButton" onmouseover="moverBotao()" onmouseleave="pararMovimento()">Não</button>
+            </div>
+        </div>
+
+        <!-- Contrato -->
+        <div id="secaoContrato" class="hidden">
+            <h2>Contrato de Namoro</h2>
+            <p><strong>Nome:</strong> <span id="nomeContrato"></span></p>
+            <p><strong>Nome do Namorado:</strong> <span id="contratoParceiro"></span></p>
+            <p>Este contrato é um compromisso de renovação do namoro, firmado entre as partes acima mencionadas. Após 6 meses o contrato foi renovado</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
