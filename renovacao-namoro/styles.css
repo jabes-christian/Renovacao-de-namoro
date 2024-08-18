@@ -65,7 +65,7 @@ button:hover {
 
 #noButton {
     position: relative;
-    transition: transform 0.1s linear; /* Ajuste a duração da transição */
+    transition: transform 0.0s linear; /* Ajuste a duração da transição */
 }
 
 #secaoContrato {
