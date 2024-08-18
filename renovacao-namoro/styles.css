@@ -65,10 +65,33 @@ button:hover {
 
 #noButton {
     position: relative;
-    transition: transform 0.0s linear; /* Ajuste a duração da transição */
+    transition: transform 0.1s linear; /* Ajuste a duração da transição */
 }
-
 
 #secaoContrato {
     margin-top: 20px;
+}
+
+#secaoError {
+    text-align: center;
+}
+
+#errorImage {
+    max-width: 100%;
+    height: auto;
+}
+
+}
+
+#voltaBotao {
+    background-color: #7161ff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#voltaBotao:hover {
+    background-color: #572afa;
 }
