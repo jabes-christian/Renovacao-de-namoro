@@ -78,6 +78,11 @@ function voltaLogin() {
     document.getElementById('senha').value = '';
 }
 
+function mostrarDica() {
+    // Exibe a dica de senha ao focar no campo de senha
+    document.getElementById('dicaSenha').classList.remove('hidden');
+}
+
 // Adiciona os eventos de mouse ao botão "Não"
 noButton.addEventListener('mouseover', moverBotao);
 noButton.addEventListener('mouseleave', pararMovimento);

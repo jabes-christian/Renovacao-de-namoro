@@ -18,7 +18,8 @@
                 <label for="usuario">Seu Nome Completo:</label>
                 <input type="text" id="usuario" name="usuario" required>
                 <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required>
+                <input type="password" id="senha" name="senha" required onfocus="mostrarDica()">
+                <div id="dicaSenha" class="dica hidden">Dica: O nome do seu amor, em minúsculas.</div> <!-- Campo de dica -->
                 <button type="button" onclick="login()">Acessar</button>
             </form>
         </div>
