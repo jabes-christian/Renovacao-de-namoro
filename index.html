@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RENOVAÇÃO DE NAMORO</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script> <!-- Certifique-se de que o script seja carregado após o HTML -->
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <!-- Formulário de Login -->
+        <div id="secaoLogin">
+            <h1>Cadastro</h1>
+            <h2>Para o coração do seu (?)</h2>
+            <form id="loginForm">
+                <label for="usuario">Seu Nome Completo:</label>
+                <input type="text" id="usuario" name="usuario" required>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+                <button type="button" onclick="login()">Acessar</button>
+            </form>
+        </div>
+
+        <!-- Mensagem de Renovação -->
+        <div id="secaoRenovação" class="hidden">
+            <h2>Você aceita fazer uma renovação do nosso namoro?</h2>
+            <div id="buttons">
+                <button id="yesButton" aria-label="Aceitar renovação do namoro" onclick="mostrarContrato()">Sim</button>
+                <button id="noButton" aria-label="Recusar renovação do namoro" onmouseover="moverBotao(event)" onmouseleave="pararMovimento()">Não</button>
+            </div>
+        </div>
+
+        <!-- Contrato -->
+        <div id="secaoContrato" class="hidden">
+            <h2>Contrato de Namoro</h2>
+            <p><strong>Nome:</strong> <span id="nomeContrato"></span></p>
+            <p><strong>Nome do Namorado:</strong> <span id="contratoParceiro"></span></p>
+            <p>Este contrato é um compromisso de renovação do namoro, firmado entre as partes acima mencionadas. Após 1 ano, o contrato foi renovado.</p>
+
+            <!-- Botão para prosseguir para a galeria de imagens -->
+            <button class="btnAssinar" id="prosseguirButton">Prosseguir<button>
+        </div>
+
+        <!-- Seção de Imagens (inicialmente oculta) -->
+        <div id="secaoImagens" class="hidden">
+            <div id="imagemContainer">
+                <img id="imagemAtual" src="" alt="Imagem">
+            </div>
+        </div>
+
+        <!-- Tela de Erro -->
+        <div id="secaoError" class="hidden">
+            <img src="img/1000_F_95834632_CL4kevuB3WZLoX72MB52KTLJqx4qhvQj.jpg" alt="Erro" id="errorImage"> <!-- Certifique-se de que o caminho para a imagem está correto -->
+            <h2>ERROUUUU!!! te dou outra chance</h2>
+            <button id="voltaBotao" onclick="voltaLogin()">Tentar Novamente</button>
+        </div>
+    </div>
+
+</body>
+</html>

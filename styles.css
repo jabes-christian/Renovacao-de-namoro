@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0e8e8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Evita barras de rolagem */
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('img/—Pngtree—valentines\ day\ red\ hearts\ background_1293296\ \(1\).jpg'); /* Corrected image path */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Adiciona o efeito de desfoque */
+    z-index: -1;
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px; /* Ensures the container doesn't exceed this width */
+    position: relative;
+    z-index: 1;
+}
+
+h1, h2 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 94%;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #7161ff;
+    outline: none;
+}
+
+button {
+    background-color: #7161ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+button:hover {
+    background-color: #572afa;
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.hidden {
+    display: none;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#noButton {
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* Smooth button movement */
+}
+
+#secaoContrato {
+    margin-top: 20px;
+}
+
+#secaoContrato {
+    background-color: #ffffff; /* Cor de fundo clara */
+    border-radius: 12px; /* Bordas arredondadas */
+    padding: 20px 30px; /* Mais espaço interno para dar um toque mais confortável */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+    max-width: 600px; /* Define uma largura máxima para garantir que o conteúdo não fique muito largo */
+    margin: 30px auto; /* Centraliza o conteúdo e dá um espaço legal ao redor */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: aparecerContrato 0.6s ease-out forwards; /* Animação suave para aparecer */
+}
+
+@keyframes aparecerContrato {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#secaoContrato h2 {
+    font-size: 1.8rem; /* Tamanho maior para o título */
+    font-weight: bold;
+    color: #572afa; /* Cor do título, roxo suave */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    text-align: center;
+}
+
+#secaoContrato p {
+    font-size: 1.1rem; /* Tamanho de texto confortável para leitura */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
+    color: #555; /* Cor mais suave para o texto */
+    margin: 10px 0; /* Espaço entre os parágrafos */
+}
+
+#secaoContrato span {
+    color: #572afa; /* Cor roxa para destacar os nomes */
+    font-weight: bold;
+}
+
+#secaoContrato .btnAssinar {
+    display: block;
+    margin: 30px auto 0;
+    padding: 12px 30px;
+    background-color: #7161ff;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px; /* Botão com bordas arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 50%;
+    text-align: center;
+}
+
+#secaoContrato .btnAssinar:hover {
+    background-color: #572afa; /* Cor mais escura quando o mouse passa por cima */
+}
+
+/* Estilizando o botão Prosseguir */
+#prosseguirButton {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 30px;
+    background-color: #572afa;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 50%;
+    text-align: center;
+}
+
+#prosseguirButton:hover {
+    background-color: #3a1db4; /* Cor mais escura ao passar o mouse */
+}
+
+/* Seção de imagens */
+#secaoImagens {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#imagemContainer {
+    position: relative;
+}
+
+#imagemAtual {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    transition: opacity 1s ease-in-out;
+}
+
+#secaoError {
+    text-align: center;
+}
+
+#errorImage {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+#voltaBotao {
+    background-color: #7161ff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#voltaBotao:hover {
+    background-color: #572afa;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+}
